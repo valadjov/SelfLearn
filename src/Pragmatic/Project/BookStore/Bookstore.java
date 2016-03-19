@@ -21,13 +21,14 @@ public class Bookstore {
 
 	public void listBooksAndStockCount() {
 		if (books.size() == 0) {
+
 			System.out.println("There aren't any books in the bookstore.");
 			return;
 		}
 		String[] booksAndStockCount = new String[books.size()];
 		for (int i = 0; i < books.size(); i++) {
-			System.out.println("The book " + books.get(i).getTitle() + " has "
-					+ books.get(i).getStock() + " available copies in stock.");
+			System.out.println("The book " + books.get(i).getTitle() + " has " + books.get(i).getStock()
+					+ " available copies in stock.");
 		}
 	}
 
