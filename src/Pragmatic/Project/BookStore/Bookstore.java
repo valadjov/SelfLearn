@@ -27,8 +27,8 @@ public class Bookstore {
 		}
 		String[] booksAndStockCount = new String[books.size()];
 		for (int i = 0; i < books.size(); i++) {
-			System.out.println("The book " + books.get(i).getTitle() + " has " + books.get(i).getStock()
-					+ " available copies in stock.");
+			System.out.println("The book " + books.get(i).getTitle() + " has "
+					+ books.get(i).getStock() + " available copies in stock.");
 		}
 	}
 
@@ -46,5 +46,15 @@ public class Bookstore {
 			return true;
 		}
 		return false;
+	}
+
+	public void searchBook(String s) {
+		s = s.toLowerCase();
+		for (int i = 0; i < books.size(); i++) {
+			String bookTitle = (books.get(i).getTitle());
+			if ((bookTitle.toLowerCase()).contains(s)) {
+				System.out.println(bookTitle);
+			}
+		}
 	}
 }
