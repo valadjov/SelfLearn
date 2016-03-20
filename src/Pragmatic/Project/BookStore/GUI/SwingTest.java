@@ -37,7 +37,7 @@ public class SwingTest extends JFrame implements ActionListener {
 		setSize(730, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(null);
-		getContentPane().setBackground(Color.BLACK);
+		getContentPane().setBackground(Color.BLUE);
 		// buttons setup
 		newBook.setBounds(10, 10, 200, 100);
 		newBook.setIcon(bookButtonPic);
@@ -90,6 +90,8 @@ public class SwingTest extends JFrame implements ActionListener {
 		JOptionPane.showInputDialog(null, "Search", "TEST", JOptionPane.INFORMATION_MESSAGE);
 
 	}
+	
+
 	
 
 }
