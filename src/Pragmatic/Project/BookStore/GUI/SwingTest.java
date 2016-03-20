@@ -29,15 +29,16 @@ public class SwingTest extends JFrame implements ActionListener {
 	
 	public SwingTest() {
 		createUI();
+		
 	}
 
-	public void createUI() {
+	private void createUI() {
 		// setting main frame
 		setTitle("Main Menu");
 		setSize(730, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(null);
-		getContentPane().setBackground(Color.BLACK);
+		getContentPane().setBackground(Color.BLUE);
 		// buttons setup
 		newBook.setBounds(10, 10, 200, 100);
 		newBook.setIcon(bookButtonPic);
@@ -64,7 +65,7 @@ public class SwingTest extends JFrame implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		Object source = e.getSource();
 		if (source == newBook){
-			newBook();
+			newBookUI();
 		}else if (source == sellBookButton){
 			sellBook();
 		}else if (source == listStock){
@@ -74,8 +75,9 @@ public class SwingTest extends JFrame implements ActionListener {
 		}
 	}
 	
-	public void newBook(){
-		JOptionPane.showMessageDialog(null, "Book added", "TEST", JOptionPane.INFORMATION_MESSAGE);
+	public void newBookUI(){
+		NewBookUI bookUI = new NewBookUI();
+		bookUI.setVisible(true);
 	}
 	
 	public void sellBook(){
@@ -90,6 +92,8 @@ public class SwingTest extends JFrame implements ActionListener {
 		JOptionPane.showInputDialog(null, "Search", "TEST", JOptionPane.INFORMATION_MESSAGE);
 
 	}
+	
+
 	
 
 }
