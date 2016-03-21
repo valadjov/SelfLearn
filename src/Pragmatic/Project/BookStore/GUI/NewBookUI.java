@@ -1,5 +1,6 @@
 package Pragmatic.Project.BookStore.GUI;
 
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -51,9 +52,9 @@ public class NewBookUI extends JFrame implements ActionListener {
 
 	private void createUI() {
 		setTitle("Main Menu");
-		setSize(433, 400);
+		setSize(433, 415);
 		setLayout(null);
-
+		getContentPane().setBackground(SystemColor.textHighlight);
 		// labels setting:
 		labelName.setBounds(20, 20, 200, 30);
 		labelName.setFont(labelName.getFont().deriveFont(20f));
@@ -98,37 +99,37 @@ public class NewBookUI extends JFrame implements ActionListener {
 		add(stockField);
 
 		// buttons setting
-		addButton.setBounds(306, 20, 100, 100);
+		addButton.setBounds(62, 323, 100, 30);
 		add(addButton);
 
-		cancelButton.setBounds(306, 130, 100, 100);
+		cancelButton.setBounds(180, 323, 100, 30);
 		add(cancelButton);
 		// separator
 
-		JSeparator separator = new JSeparator();
-		separator.setBounds(110, 63, 1, 2);
-		add(separator);
-		separator_1.setBounds(12, 63, 289, 2);
-
-		add(separator_1);
-		separator_2.setBounds(12, 118, 394, 2);
-
-		add(separator_2);
-		separator_3.setBounds(12, 173, 288, -8);
-
-		add(separator_3);
-		separator_4.setBounds(7, 178, 293, -8);
-
-		add(separator_4);
-		separator_5.setBounds(12, 178, 289, 2);
-
-		add(separator_5);
-		separator_6.setBounds(20, 228, 280, 2);
-
-		add(separator_6);
-		separator_7.setBounds(7, 280, 399, 2);
-
-		add(separator_7);
+	    JSeparator separator = new JSeparator();
+	    separator.setBounds(110, 63, 1, 2);
+	    add(separator);
+	    separator_1.setBounds(12, 63, 289, 2);
+	    
+	    add(separator_1);
+	    separator_2.setBounds(12, 118, 394, 2);
+	    
+	    add(separator_2);
+	    separator_3.setBounds(12, 173, 288, -8);
+	    
+	    add(separator_3);
+	    separator_4.setBounds(7, 178, 293, -8);
+	    
+	    add(separator_4);
+	    separator_5.setBounds(11, 168, 289, 2);
+	    
+	    add(separator_5);
+	    separator_6.setBounds(20, 221, 280, 2);
+	    
+	    add(separator_6);
+	    separator_7.setBounds(12, 273, 399, 2);
+	    
+	    add(separator_7);
 	}
 
 	@Override

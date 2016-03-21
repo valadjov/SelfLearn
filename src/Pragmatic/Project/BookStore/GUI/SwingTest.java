@@ -1,6 +1,7 @@
 package Pragmatic.Project.BookStore.GUI;
 
 import java.awt.Color;
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -38,7 +39,7 @@ public class SwingTest extends JFrame implements ActionListener {
 		setSize(730, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(null);
-		getContentPane().setBackground(Color.BLUE);
+		getContentPane().setBackground(SystemColor.textHighlight);
 		// buttons setup
 		newBook.setBounds(10, 10, 200, 100);
 		newBook.setIcon(bookButtonPic);
