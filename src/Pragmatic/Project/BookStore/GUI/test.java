@@ -1,7 +1,6 @@
 package Pragmatic.Project.BookStore.GUI;
 
 import java.awt.Color;
-import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -14,8 +13,13 @@ import javax.swing.JTextField;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.JPasswordField;
+import java.awt.SystemColor;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import com.jgoodies.forms.layout.RowSpec;
 
-public class SwingTest extends JFrame implements ActionListener {
+public class test extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 
@@ -28,7 +32,7 @@ public class SwingTest extends JFrame implements ActionListener {
 	ImageIcon listButtonPic = new ImageIcon("img/list.png");
 	ImageIcon searchButtonPic = new ImageIcon("img/search.png");
 	
-	public SwingTest() {
+	public test() {
 		createUI();
 		
 	}
@@ -38,28 +42,24 @@ public class SwingTest extends JFrame implements ActionListener {
 		setTitle("Main Menu");
 		setSize(730, 400);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(null);
 		getContentPane().setBackground(SystemColor.textHighlight);
-		// buttons setup
-		newBook.setBounds(10, 10, 200, 100);
+		newBook.setBounds(12, 11, 200, 100);
 		newBook.setIcon(bookButtonPic);
 		newBook.addActionListener(this);
-		add(newBook);
-		
-		sellBookButton.setBounds(500, 10, 200, 100);
+		getContentPane().setLayout(null);
+		getContentPane().add(newBook);
+		sellBookButton.setBounds(502, 11, 200, 100);
 		sellBookButton.setIcon(sellButtonPic);
 		sellBookButton.addActionListener(this);
-		add(sellBookButton);
-		
-		listStock.setBounds(10, 200, 200, 100);
+		getContentPane().add(sellBookButton);
+		listStock.setBounds(12, 201, 200, 100);
 		listStock.setIcon(listButtonPic);
 		listStock.addActionListener(this);
-		add(listStock);
-		
-		search.setBounds(500, 200, 200, 100);
+		getContentPane().add(listStock);
+		search.setBounds(502, 201, 200, 100);
 		search.setIcon(searchButtonPic);
 		search.addActionListener(this);
-		add(search);
+		getContentPane().add(search);
 
 	}
 
@@ -93,8 +93,4 @@ public class SwingTest extends JFrame implements ActionListener {
 		JOptionPane.showInputDialog(null, "Search", "TEST", JOptionPane.INFORMATION_MESSAGE);
 
 	}
-	
-
-	
-
 }

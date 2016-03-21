@@ -1,22 +1,19 @@
 package Pragmatic.Project.BookStore.GUI;
 
+import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.Font;
-import java.awt.GridLayout;
-import java.awt.LayoutManager;
-
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
-public class NewBookUI extends JFrame implements ActionListener{
+public class NewBookUI extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	private static final LayoutManager GridLayout = null;
-	//LABEL VARS
+
+	// LABEL VARS
 	private JLabel labelName = new JLabel("Name ");
 	private JLabel labelAuthor = new JLabel("Author ");
 	private JLabel labelPrice = new JLabel("Price ");
@@ -24,9 +21,7 @@ public class NewBookUI extends JFrame implements ActionListener{
 	private JLabel labelOrigin = new JLabel("Origin ");
 	private JLabel labelStock = new JLabel("Stock Count ");
 	// END OF LABEL VARS
-	
-	
-	
+
 	// FIELD VARS
 	private JTextField nameField = new JTextField();
 	private JTextField authorField = new JTextField();
@@ -34,70 +29,113 @@ public class NewBookUI extends JFrame implements ActionListener{
 	private JTextField publisherField = new JTextField();
 	private JTextField originField = new JTextField();
 	private JTextField stockField = new JTextField();
+
 	// END OF FIELD VARS
-	
-	
-	
-	public NewBookUI(){
+
+	// button
+	private JButton addButton = new JButton("ADD");
+	private JButton cancelButton = new JButton("CANCEL");
+
+	// separator
+
+	private final JSeparator separator_1 = new JSeparator();
+	private final JSeparator separator_2 = new JSeparator();
+	private final JSeparator separator_3 = new JSeparator();
+	private final JSeparator separator_4 = new JSeparator();
+	private final JSeparator separator_5 = new JSeparator();
+	private final JSeparator separator_6 = new JSeparator();
+	private final JSeparator separator_7 = new JSeparator();
+
+	public NewBookUI() {
 		createUI();
 	}
-	
-	private void createUI(){
+
+	private void createUI() {
 		setTitle("Main Menu");
-		setSize(730, 400);
-	    setLayout(null);
+		setSize(433, 415);
+		setLayout(null);
+		getContentPane().setBackground(SystemColor.textHighlight);
+		// labels setting:
+		labelName.setBounds(20, 20, 200, 30);
+		labelName.setFont(labelName.getFont().deriveFont(20f));
+		add(labelName);
+
+		labelAuthor.setBounds(20, 20, 200, 140);
+		labelAuthor.setFont(labelAuthor.getFont().deriveFont(20f));
+		add(labelAuthor);
+		labelPrice.setBounds(20, 20, 200, 240);
+		labelPrice.setFont(labelPrice.getFont().deriveFont(20f));
+		add(labelPrice);
+
+		labelPublisher.setBounds(20, 20, 200, 340);
+		labelPublisher.setFont(labelPublisher.getFont().deriveFont(20f));
+		add(labelPublisher);
+
+		labelOrigin.setBounds(20, 20, 200, 440);
+		labelOrigin.setFont(labelOrigin.getFont().deriveFont(20f));
+		add(labelOrigin);
+
+		labelStock.setBounds(20, 20, 200, 540);
+		labelStock.setFont(labelStock.getFont().deriveFont(20f));
+		add(labelStock);
+
+		// field setting:
+		nameField.setBounds(100, 20, 150, 30);
+		add(nameField);
+
+		authorField.setBounds(100, 78, 150, 30);
+		add(authorField);
+
+		priceField.setBounds(100, 130, 150, 30);
+		add(priceField);
+
+		publisherField.setBounds(120, 178, 150, 30);
+		add(publisherField);
+
+		originField.setBounds(100, 230, 150, 30);
+		add(originField);
+
+		stockField.setBounds(150, 280, 150, 30);
+		add(stockField);
+
+		// buttons setting
+		addButton.setBounds(62, 323, 100, 30);
+		add(addButton);
+
+		cancelButton.setBounds(180, 323, 100, 30);
+		add(cancelButton);
+		// separator
+
+	    JSeparator separator = new JSeparator();
+	    separator.setBounds(110, 63, 1, 2);
+	    add(separator);
+	    separator_1.setBounds(12, 63, 289, 2);
 	    
-	    //labels setting:
-	    labelName.setBounds(20, 20, 200, 30);
-	    labelName.setFont(labelName.getFont().deriveFont(20f));
-	    add(labelName);	    
+	    add(separator_1);
+	    separator_2.setBounds(12, 118, 394, 2);
 	    
-	    labelAuthor.setBounds(20, 20, 200, 140);
-	    labelAuthor.setFont(labelAuthor.getFont().deriveFont(20f));
-	    add(labelAuthor);	    
-	    labelPrice.setBounds(20, 20, 200, 240);	   
-	    labelPrice.setFont(labelPrice.getFont().deriveFont(20f));
-	    add(labelPrice);
+	    add(separator_2);
+	    separator_3.setBounds(12, 173, 288, -8);
 	    
-	    labelPublisher.setBounds(20, 20, 200, 340);
-	    labelPublisher.setFont(labelPublisher.getFont().deriveFont(20f));
-	    add(labelPublisher);
+	    add(separator_3);
+	    separator_4.setBounds(7, 178, 293, -8);
 	    
-	    labelOrigin.setBounds(20, 20, 200, 440);
-	    labelOrigin.setFont(labelOrigin.getFont().deriveFont(20f));
-	    add(labelOrigin);
+	    add(separator_4);
+	    separator_5.setBounds(11, 168, 289, 2);
 	    
-	    labelStock.setBounds(20, 20, 200, 540);
-	    labelStock.setFont(labelStock.getFont().deriveFont(20f));
-	    add(labelStock);
+	    add(separator_5);
+	    separator_6.setBounds(20, 221, 280, 2);
 	    
-	    //field setting:
-	    nameField.setBounds(100, 20, 150, 30);
-	    add(nameField);
+	    add(separator_6);
+	    separator_7.setBounds(12, 273, 399, 2);
 	    
-	    authorField.setBounds(100, 78, 150, 30);
-	    add(authorField);
-	    
-	    priceField.setBounds(100, 130, 150, 30);
-	    add(priceField);
-	    
-	    publisherField.setBounds(120, 178, 150, 30);
-	    add(publisherField);
-	    
-	    originField.setBounds(100, 230, 150, 30);
-	    add(originField);
-	    
-	    stockField.setBounds(150, 280, 150, 30);
-	    add(stockField);
-	    
+	    add(separator_7);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
-	
 
 }
